@@ -9,10 +9,9 @@ VOLUME [ "/work" ]
 WORKDIR "/work"
 
 RUN wget -q -O /tmp/tfalks.tar.gz https://github.com/Cox-Automotive/terraform-provider-alks/releases/download/${TF_ALKS_PROVIDER_VERSION}/terraform-provider-alks-linux-amd64.tar.gz && \
-    mkdir -p ~/.terraform.d/plugins/ && \
-    tar -zxvf /tmp/tfalks.tar.gz -C ~/.terraform.d/plugins/ && \
+    tar -zxvf /tmp/tfalks.tar.gz -C /bin/ && \
     rm /tmp/tfalks.tar.gz && \
-    chmod a+x ~/.terraform.d/plugins/terraform-provider-alks*
+    chmod a+x /bin/terraform-provider-alks*
 
 ENTRYPOINT ["terraform"]
 CMD ["version"]
