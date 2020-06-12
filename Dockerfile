@@ -2,7 +2,7 @@ FROM hashicorp/terraform:0.12.26
 MAINTAINER David Kolb <david.kolb@coxautoinc.com>
 
 ENV TERRAFORM_VERSION=0.12.26
-ENV TF_ALKS_PROVIDER_VERSION=1.3.2
+ENV TF_ALKS_PROVIDER_VERSION=1.3.4
 
 RUN mkdir /work
 VOLUME [ "/work" ]
